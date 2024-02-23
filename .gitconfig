@@ -1,0 +1,36 @@
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[user]
+	name = Steve Jonk
+	email = stevejonk1993@gmail.com
+[core]
+	excludesFile = /Users/stevejonk/.gitignore
+	editor = webstorm
+	pager = delta
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[diff]
+	colorMoved = default
+[alias]
+    changelog = !"git log --oneline $(git describe --tags --abbrev=0)...master | awk '{$1=\" -\"; print $0}'"
+    changes = !"git changelog | pbcopy && code CHANGES"
+    rellog = !git "--no-pager log --pretty=\"%C(Yellow)%h %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s\" --date=short"
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[includeIf "gitdir:./Documents/Projecten/LabDigital/"]
+  path = ~/.gitconfig-labdigital
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+[merge]
+    conflictstyle = diff3

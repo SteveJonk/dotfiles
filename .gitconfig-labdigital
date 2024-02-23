@@ -1,0 +1,16 @@
+[user]
+  name = Steve Jonk
+  email = s.jonk@labdigital.nl
+
+[branch]
+  autoSetupRebase = always
+
+[rebase]
+  autoStash = true
+
+[push]
+  default = simple
+  followTags = true
+        
+[merge]
+  ff = only
