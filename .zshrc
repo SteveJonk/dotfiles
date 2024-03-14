@@ -1,5 +1,5 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+# CodeWhisperer pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
 # pretty log for monorepos
 glog-pretty-from(){
 command="git log --pretty=\"%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s\" --date=short $1...HEAD "
@@ -12,8 +12,6 @@ fi
 eval "$command"
 }
 
-# Fig pre block. Keep at the top of this file.
-
 # Python geneuzel
 export PATH="${PATH}:${HOME}/.local/bin:/Users/stevejonk/Library/Python/3.8/bin"
 export PATH="/usr/local/opt/python@3.7/bin:$PATH"
@@ -25,8 +23,6 @@ export PIP_WHEEL_DIR="${WHEELHOUSE}"
 export LDFLAGS="-L/opt/homebrew/opt/jpeg/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/jpeg/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/jpeg/lib/pkgconfig"
-
-eval "$(fig init zsh pre)"
 
 # Aliases
 alias ibrew="arch -x86_64 /usr/local/bin/brew"
@@ -186,8 +182,11 @@ if [ -f '/Users/stevejonk/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/steve
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/stevejonk/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/stevejonk/google-cloud-sdk/completion.zsh.inc'; fi
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+
+[[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
+
+# CodeWhisperer post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
