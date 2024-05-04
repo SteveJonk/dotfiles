@@ -3,7 +3,6 @@
 
 # Remove initial dotfiles if present
 rm ~/.gitconfig
-rm ~/.vim/coc-settings.json
 rm ~/.zshrc
 rm ~/.vimrc
 
