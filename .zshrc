@@ -70,7 +70,7 @@ ZSH_THEME="simple"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( git z zsh-syntax-highlighting zsh-autosuggestions)
+plugins=( git z zsh-syntax-highlighting zsh-autosuggestions zsh-autocomplete )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,18 +91,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
@@ -110,11 +98,6 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
-
-# pnpm
-export PNPM_HOME="/Users/stevejonk/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
 
 # nvm use on cd
 autoload -U add-zsh-hook
@@ -137,18 +120,3 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/stevejonk/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/stevejonk/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/stevejonk/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/stevejonk/google-cloud-sdk/completion.zsh.inc'; fi
-
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-
-
-[[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
-
-# CodeWhisperer post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
