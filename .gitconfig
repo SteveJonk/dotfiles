@@ -25,8 +25,6 @@
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
-[includeIf "gitdir:./Documents/Projecten/LabDigital/"]
-  path = ~/.gitconfig-labdigital
 [interactive]
     diffFilter = delta --color-only
 [delta]
