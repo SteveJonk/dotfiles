@@ -8,6 +8,5 @@ rm ~/.vimrc
 
 # Symlinks to dotfiles
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/.gitconfig-labdigital ~/.gitconfig-labdigital
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
