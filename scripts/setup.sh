@@ -6,6 +6,10 @@ rm ~/.gitconfig
 rm ~/.zshrc
 rm ~/.vimrc
 
+touch ~/.gitconfig
+touch ~/.zshrc
+touch ~/.vimrc
+
 # Symlinks to dotfiles
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.zshrc ~/.zshrc
