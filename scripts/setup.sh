@@ -11,6 +11,6 @@ touch ~/.zshrc
 touch ~/.vimrc
 
 # Symlinks to dotfiles
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
